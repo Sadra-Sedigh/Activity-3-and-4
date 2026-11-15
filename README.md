@@ -125,12 +125,3 @@ flowchart TD
 
 
 
-flowchart TD
-    A[Client / Web Application] --> B[REST API]
-    B --> C[Users Endpoint]
-    B --> D[Tasks Endpoint]
-    C --> E[Business Logic Layer]
-    D --> E
-    E --> F[(Database)]
-    F --> G[Users Table]
-    F --> H[Tasks Table]
