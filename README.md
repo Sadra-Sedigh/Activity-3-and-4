@@ -121,3 +121,16 @@ flowchart TD
 دو منبع اصلی Users و Tasks انتخاب شدند و عملیات اصلی CRUD برای هرکدام طراحی گردید. همچنین متدهای HTTP و کدهای وضعیت مناسب برای هر Endpoint مشخص شدند.
 
 در نهایت، دیاگرام معماری سه‌لایه و ساختار اولیه پایگاه داده طراحی شد تا نحوه ارتباط اجزای مختلف سیستم با یکدیگر مشخص شود.
+
+
+
+
+flowchart TD
+    A[Client / Web Application] --> B[REST API]
+    B --> C[Users Endpoint]
+    B --> D[Tasks Endpoint]
+    C --> E[Business Logic Layer]
+    D --> E
+    E --> F[(Database)]
+    F --> G[Users Table]
+    F --> H[Tasks Table]
